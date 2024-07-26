@@ -28,7 +28,7 @@ const Home = () => {
             <Card
               key={item.id}
               title={item.title}   
-            id={`Album ID: ${item.id}`} 
+              id={`Album ID: ${item.id}`} 
             />
         ))}
       </div>
