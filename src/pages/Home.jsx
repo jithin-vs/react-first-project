@@ -4,8 +4,7 @@ import Card from '../components/Card.jsx';
 import './Home.css'
 
 const Home = () => {
-  const [data, setData] = useState([]);
-
+  const [data, setData] = useState([]); 
   useEffect(() => {
   const fetchData = async () => {
     try {
@@ -25,11 +24,14 @@ const Home = () => {
      <div className="card-container">
         {data.map((item) => (
 
-            <Card
+          <Card
+              type ="add"
               key={item.id}
               title={item.title}   
-              id={`Album ID: ${item.id}`} 
-            />
+              id={item.id} 
+          >
+            Add to Cart
+           </Card>
         ))}
       </div>
     </>

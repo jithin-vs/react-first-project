@@ -2,12 +2,14 @@ import React from "react";
 import Button from './Button.jsx';
 import "./Card.css";
 
-const Card = ({ id,title}) => {
+const Card = ({type,children,id,title}) => {
   return (
       <div className="card-body">
         <h3 className="card-title">{title}</h3>
-        <p className="card-description">{id}</p>
-        <Button />
+        <div className=" card-bottom">
+        <p className="card-description">{`ALBUM ID:${id}`}</p>
+        <Button btnType={type} id={id} title={title}>{children}</Button>
+        </div>  
       </div>
   );
 };
