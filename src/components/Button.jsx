@@ -36,11 +36,6 @@ const Button = ({ btnType, children, id, title }) => {
       </button>
     );
   }
-  return (
-    <button className="primary-button" >
-      {children}
-    </button>
-  );
 };
 
 export default Button;
